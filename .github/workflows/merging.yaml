@@ -1,6 +1,8 @@
 name: Merging CI
 
 on:
+  pull_request:
+    types: [enqueued]
   merge_group:
     types: [checks_requested]
 
