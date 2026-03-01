@@ -19,8 +19,7 @@ get_current_branch() {
 
 GIT_CURRENT_BRANCH=$(get_current_branch)
 
-git branch
-git branch -r
+git branch -a
 echo $GIT_CURRENT_BRANCH
 
 git filter-branch --msg-filter '
