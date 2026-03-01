@@ -17,6 +17,9 @@ get_current_branch() {
   printf '%s' "${branch}"
 }
 
+git remote set-url origin "https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@${INPUT_ORGANIZATION_DOMAIN}/${GITHUB_REPOSITORY}"
+git fetch origin
+
 GIT_CURRENT_BRANCH=$(get_current_branch)
 
 git branch -a
