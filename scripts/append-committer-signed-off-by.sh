@@ -19,6 +19,8 @@ get_current_branch() {
 
 GIT_CURRENT_BRANCH=$(get_current_branch)
 
+echo $GIT_CURRENT_BRANCH
+
 git filter-branch --msg-filter '
 	cat &&
         echo "Acked-by: Bugs Bunny <bunny@bugzilla.org>"
