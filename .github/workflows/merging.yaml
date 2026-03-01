@@ -1,0 +1,13 @@
+name: Merging CI
+
+on:
+  merge_group:
+    types: [checks_requested]
+
+jobs:
+  append-committer-signed-off-by:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          scripts/append-committer-signed-off-by.sh
