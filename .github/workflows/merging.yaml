@@ -1,11 +1,12 @@
 name: Merging CI
 
 on:
-  merge_group:
   pull_request:
+  merge_group:
 
 jobs:
   append-committer-signed-off-by:
+    if: ${{ github.event_name == 'merge_group' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

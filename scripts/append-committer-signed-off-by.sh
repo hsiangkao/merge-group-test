@@ -29,6 +29,6 @@ echo $GIT_CURRENT_BRANCH
 git filter-branch --msg-filter '
 	cat &&
         echo "Acked-by: Bugs Bunny <bunny@bugzilla.org>"
-' origin/${GIT_CURRENT_BRANCH%%/*}..HEAD
+' origin/main..HEAD
 
 git push -f origin $GIT_CURRENT_BRANCH
