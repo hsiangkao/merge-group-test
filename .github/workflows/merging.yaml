@@ -3,7 +3,6 @@ name: Merging CI
 on:
   pull_request:
   merge_group:
-    types: [checks_requested]
 
 jobs:
   append-committer-signed-off-by:
